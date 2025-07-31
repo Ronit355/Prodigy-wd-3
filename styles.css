@@ -1,0 +1,88 @@
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: white;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;  /* Larger width for spacious feel */
+}
+
+h1 {
+  color: #007bff;
+  font-size: 2.5em;  /* Larger title font */
+  margin: 0 0 20px;
+}
+
+.board {
+  position: relative;  /* For absolute positioning of SVG */
+  display: grid;
+  grid-template-columns: repeat(3, 120px);  /* Larger cells */
+  grid-gap: 10px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 120px;
+  height: 120px;
+  background-color: #f8f9fa;
+  border-radius: 15px;  /* Rounded cells for modern feel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;  /* Larger markers */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+.cell.x {
+  color: #6f42c1;  /* Purple for X, matching stopwatch button colors */
+}
+
+.cell.o {
+  color: #dc3545;  /* Red for O */
+}
+
+#status {
+  font-size: 2em;  /* Larger status text */
+  margin: 20px 0;
+  color: #333;
+}
+
+#reset {
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 2em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0 auto;
+}
+
+#reset:hover {
+  background-color: #e0e0e0;
+}
+
+#win-line line {
+  stroke: green;
+  stroke-width: 8px;
+  stroke-linecap: round;
+}
